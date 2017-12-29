@@ -1,10 +1,14 @@
 import React, {PureComponent} from 'react';
-import Reactors, {View} from 'reactors';
+import Reactors, {StyleSheet, View} from 'reactors';
 import omit from 'lodash/omit';
 
-const transformProps = (props, direction) => {
-  const startStyle = Reactors.props(props.style);
-  const style = [startStyle];
+const transformProps = (props = {}, direction) => {
+  let start = {};
+  if (props.style) {
+    start = StyleSheet.transform(props.style);
+  }
+  const style = [start];
+  style.push({flexDirection: direction});
   const blackList = [];
   for (const key in props) {
     switch (key) {
@@ -29,6 +33,7 @@ const transformProps = (props, direction) => {
       blackList.push('flexCenter');
       break;
     case 'flexCenterHorizontal':
+    case 'flexCenterY':
       if (direction === 'column') {
         style.push({alignItems: 'center'});
       } else {
@@ -37,6 +42,7 @@ const transformProps = (props, direction) => {
       blackList.push('flexCenterHorizontal');
       break;
     case 'flexCenterVertical':
+    case 'flexCenterX':
       if (direction === 'column') {
         style.push({justifyContent: 'center'});
       } else {

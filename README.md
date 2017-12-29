@@ -40,8 +40,8 @@ All props are optional.
 - `flexAround: true`
 - `flexBetween: true`
 - `flexCenter: true`
-- `flexCenterHorizontal: true`
-- `flexCenterVertical: true`
+- `flexCenterHorizontal: true` alias `flexCenterY`
+- `flexCenterVertical: true` alias `flexCenterX`
 - `flexDown: true`
 - `flexGrow: true | number`
 - `flexReverse: true`
