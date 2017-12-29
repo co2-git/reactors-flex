@@ -15,7 +15,7 @@ yarn add reactors-flex
 import * as Flex from 'reactors-flex';
 import {Text} from 'reactors'
 
-<Flex.Colum>
+<Flex.Column>
   <Text>I am in a column</Text>
   <Text>I am in a column too</Text>
   <Flex.Row>
