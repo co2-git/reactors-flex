@@ -19,9 +19,9 @@ import {Text} from 'reactors'
   <Text>I am in a column</Text>
   <Text>I am in a column too</Text>
   <Flex.Row>
-  <Text>I am in a row</Text>
-  <Text>I am in a row too</Text>
-  </FlexRow>
+    <Text>I am in a row</Text>
+    <Text>I am in a row too</Text>
+  </Flex.Row>
 </Flex.Column>
 ```
 
